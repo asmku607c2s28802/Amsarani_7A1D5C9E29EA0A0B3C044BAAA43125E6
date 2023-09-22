@@ -1,14 +1,12 @@
-def recur_factorial(n):  
-   if n == 1:  
-       return n  
-   else:  
-       return n*recur_factorial(n-1)  
-# take input from the user  
-num = int(input("Enter a number: "))  
-# check is the number is negative  
-if num < 0:  
-   print("Sorry, factorial does not exist for negative numbers")  
-elif num == 0:  
-   print("The factorial of 0 is 1")  
-else:  
-   print("The factorial of",num,"is",recur_factorial(num))
+def linear_search_product(product_list, target_product):
+    indices = []
+    for index, product in enumerate(product_list):
+        if product == target_product:
+            indices.append(index)
+    return indices
+
+# Example usage:
+products = ["apple", "banana", "orange", "apple", "grape"]
+target = "apple"
+result = linear_search_product(products, target)
+print(f"Indices of '{target}' in the list: {result}")
